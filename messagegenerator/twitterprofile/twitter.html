@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+       <h2>Fack Twitter Profile Generator</h2>
+    <div class="container">
+        <div class="valuetaker">
+              <h4>parts:</h4>
+              <input type="checkbox"> <label for="checkbox" class="cheker" >varified Account</label>
+              <h4>Tweet count</h4>
+              <input type="number" class="input" value="0" id="totaltweet" oninput="myfun()">
+              <div class="bannerphoto">
+                  <img class="banner-image-container" src="./_images/avatar.jpg"/>
+
+                 
+                 <div><h4>Banner photo</h4> 
+                    <input type="file" hidden id="real-file-btn">
+                    <button id="custom-btn" >Select Image</button></div>
+              </div> <!--end of banner photo-->
+              <div class="profilephoto">
+                  <img class="profile-image-container" src="./_images/avatar.jpg"/>
+                       
+                  
+                 <div><h4>Profile photo</h4>
+                    <input type="file" id="real-file-btn2" hidden/>
+                    <button id="custom-btn2">Select Image</button></div>
+              </div>   <!--end of profile photo-->
+              <h4>Name:</h4>
+              <input type="text" class="input" value="Yasir uddin" id="name" oninput="namefun()">
+              <h4>User Name</h4>
+              <input type="text" class="input" value="@mr_yasii" id="profilespan" oninput="spanfun()">
+              <h4>Born Date</h4>
+              <input type="text" class="input" value="June 10 ,1999" >
+              <h4>Join Data</h4>
+              <input type="text" class="input" value="Joined January 2018">
+              <div class="followerfollowing">
+                    <div class="following"><h4>Following count</h4>
+                        <input type="number" value="61" id="following" oninput="followingfun()"></div>
+                    <div class="follower"><h4>Follower count</h4>
+                        <input type="number" value="23" id="follower" oninput="followerfun()"></div>
+              </div>
+        </div>  <!--end of value taker-->
+        <div class="facktwitter">
+            <button>Live Preview</button>
+            <div id="fackprofile">
+                    <div class="tweetvalue">
+                        <h3>Tweets
+                           <span id="tweettotal">0 Tweet</span>
+                        </h3>    
+                    </div> <!--end of tweet value-->
+                    <div class="tweetpic">
+                        <img src="./_images/bluejay.jpg" id="profile_image">
+                    </div>  <!--end of tweet pic-->
+                        <button>Edit profile</button>
+                    
+                    <div class="tweettext">
+                        <!-- <button>Edit profile</button> -->
+                        <div class="nameandemail">
+                            <h3 data-profile>Yasir uddin
+                                <span id="profilespan">@mr_yasii</span>
+                            </h3>
+                            <span>Born
+                                September 2, 1999  Joined
+                                January 2016</span>
+                               <div class="foll">
+                                <h4 id="followingvalue">61</h4>
+                                <span class="fs">following</span>
+                                <h4 id="followervalue">23</h4>
+                                <span class="fs">following</span>
+                               </div>
+                        </div>
+                    </div>  <!--end of tweet text-->
+                   
+                    
+            </div>
+        </div> <!--end of facktwitterarea-->
+        <div class="dl-btn">
+                <button id="download-btn">Download Twitter Profile As Image</button>
+        </div>
+        <div id="twitter-para">
+            <p> Twitter Profile Generator generates your very own fake Twitter Profile and prank your friends. you can Generate Fake Twitter Profile, set banner images, profile photos, following count, tweet information number of followers, tweet date, tweet content, tweet hashtags and tweet post title like etc. You can change ANYTHING, use emoticons and even transfer your own profile photographs. This generator is not the slightest bit related with Twitter. All graphical material is ensured by the copyright proprietor. May just be utilized for individual use.</p>
+        </div>
+    </div>   <!--end of container-->
+    <script src="script.js"></script>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js'></script>
+<script>
+    $(document).ready(function(){
+        $("#download-btn").click(function(){
+            domtoimage.toBlob(document.getElementById('fackprofile'))
+            .then(function(blob){
+                window.saveAs(blob,'output.png');
+            });
+        });
+    });
+</script>
+</html>

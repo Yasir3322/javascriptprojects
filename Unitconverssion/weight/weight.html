@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight conversion</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+      <div id="container">
+          <header><h2>Weight conversion</h2></header>
+       <div id="main">
+            <div id="converterarea">
+                Enter weight in kg:<input type="number" id="field" min="1" onfocus="changecolor(this)"/>
+                convert to:<select id="selector" onchange="myfun(this.options[this.selectedIndex].value)">
+                    <option selected disabled>select unit</option>
+                    <option value="pound">pound</option>
+                    <option value="Milligram">Milligram</option>
+                    <option value="gram">gram</option>
+                    <option value="Ounces">Ounces</option>
+                </select>
+                <button id="btn">convert</button>
+                <p id="result"></p>
+            </div>
+       </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+body{
+    background: linear-gradient(to right , hsl(200 , 100% , 50% ),hsl(175,100%,50%));
+    place-items: center;
+    display: grid;
+    padding-top: 12%;
+    overflow: hidden;
+ }
+
+.clock{
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    position: relative;
+    display: flex;
+    justify-content:center;
+    place-items: center;
+    width: 400px;
+    height: 300px;
+    background-color: white;
+}

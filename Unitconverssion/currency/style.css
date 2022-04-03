@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image:url("./_images/curr.jpg")
+}
+header{
+    border: 1px solid black;
+    text-align: center;
+    /* background-color: tr; */
+    color: #333;
+    width: 100%;
+    background:rgba(255,255,255,0.3);
+    position:relative;
+    left:0;
+    top:0;
+    /* transition:background 0.5s ease; */
+}
+
+div#converterarea{
+    /* padding-top: 80px; */
+    width: 99%;
+    height: 600px;
+    place-items: center;
+    display: grid;
+    /* border: 1px solid black; */
+    float: left;
+}
+div#converter{
+    
+    height: 500px;
+    width: 400px;
+    background-color: rgba(255,255,255,0.3);
+    /* transition: background 0.5s ease; */
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    color: white;
+    font-family: verdana;
+  }
+

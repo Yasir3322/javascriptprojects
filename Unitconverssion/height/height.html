@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <div id="container">
+          <header><h3>height converter</h3></header>
+          <div id="main">
+           <div id="convertarea">
+               Select unit: <select id="itemselector" onchange="myfun(this.options[this.selectedIndex].value)">
+                <option selected disabled>select unit</option>
+                <option value="foottoinches">Foot to inches</option>
+                   <option value="foottocm">Foot to cm</option>
+               </select>
+               <div id="foottocm"></div>
+           <p id="result"></p>
+           </div>
+              
+          </div>
+      </div>
+      <script src="script.js"></script>
+</body>
+</html>

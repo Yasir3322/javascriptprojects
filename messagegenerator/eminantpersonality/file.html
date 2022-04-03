@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="famousperson" data-person>
+            <h3 data-heading>Muhammad Ali jinnah</h3>
+            <p data-about>"Muhammad Ali Jinnah was a barrister, politician and the founder of Pakistan. Jinnah served as the leader of the All-India Muslim League from 1913 until the inception of Pakistan on 14 August 1947, and then as the Dominion of Pakistan's first governor-general until his death.</p>
+            <img src="./-images/quaidazam.jpg" width="200px" height="250px" data-image>
+        </div>
+        <select id="myselect" onchange="myfun(this.options[this.selectedIndex].value)">
+            <option disabled selected>select personality</option>
+            <option value="qd">Quaid e Azam</option>
+            <option value="lk">Liaquat Ali Khan</option>
+            <option value="kn">Khawaja Nazimuddin</option>
+            <option value="gm">Ghulam Muhammad</option>
+            <option value="ik">Imran khan</option>
+        </select>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>currency convertor</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+        <div id="container">
+               <header id="header">
+                   <h2>Currency convertor</h2>
+               </header>
+               <div id="main">
+            
+                       <div id="converterarea">
+                      <div id="converter">
+                        Enter doller:<input type="number" id="field" onfocus="fun(this)" min="1"/>
+                        convert To: <select id="selectitem" onchange="itemsfun(this.options[this.selectedIndex].value)">
+                            <option disabled selected>select currency</option>
+                            <option value="PKR">PKR</option>
+                            <option value="FJD">FJD</option>
+                            <option value="STD">STD</option>
+                            <option value="ZAR">ZAR</option>
+                            <option value="INR">INR</option>
+                        </select>
+                        <!-- Enter today rate:<input type="number" id="field2" /> -->
+                        <!-- <button onclick="myfun()">convert</button> -->
+                        <p id="result"></p>
+                      </div>
+                    
+             </div> 
+               </div>
+        </div> 
+
+        <script src="script.js"></script>
+</body>
+</html>

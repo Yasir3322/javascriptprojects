@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="data"></div>
+    <script>
+        
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET" , "https://api.currencyfreaks.com/latest?apikey=a2abeb83bd4e46ac99ad67cc414ba8d0");
+        xhr.onreadystatechange = function() {
+               if(xhr.status == 200 && xhr.readyState == 4){
+                   let data = this.responseText;
+                //    console.log(data);
+                   const json = JSON.parse(data);
+                //    console.log(json.base);
+                   const {rates} = json;
+                    
+               }
+        }
+        xhr.send();
+    
+            
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+body{
+    background:linear-gradient(to right , hsl(200,100%,50%),hsl(175,100%,50%));
+}
+div#container{
+    width: 100%;
+    overflow: hidden;;
+    display: grid;
+    place-items: center;
+}
+div#quotearea{
+    margin-top: 15%;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    width: 80%;
+    height: 70px;
+    border: 1px solid black;
+}
+div#btn{
+    padding-top: 25px;
+
+}
